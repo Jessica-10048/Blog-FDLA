@@ -1,0 +1,924 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Crimson+Text:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Pinyon+Script&family=Crimson+Text:ital@1&display=swap');
+/* ===== BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.fdla-home {
+  background: #050505;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Crimson Text', serif;
+  position: relative;
+  overflow: hidden;
+}
+/* ===== NAVBAR ====*/
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  padding: 15px 30px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgb(210, 153, 30);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.navbar-logo img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+.navbar span{
+ font-family: 'Crimson Text', serif;
+  color: rgb(210, 153, 30);
+  font-size: 30px;
+}
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links a {
+   color: rgb(210, 153, 30);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.navbar-links a:hover {
+  color: red;
+}
+.p{
+  font-style: italic;
+font-weight: 100;
+color: rgb(223, 185, 19);
+}
+/* ===== CANVAS FUMÉE ===== */
+.smoke-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* ===== SCANLINES ===== */
+.scanlines {
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.12) 2px,
+    rgba(0, 0, 0, 0.12) 4px
+  );
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* ===== CERCLES FOND ===== */
+.bg-circles {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(212, 175, 55, 0.05);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.c1 { width: 700px; height: 700px; }
+.c2 { width: 480px; height: 480px; border-color: rgba(212, 175, 55, 0.07); }
+.c3 { width: 260px; height: 260px; border-color: rgba(212, 175, 55, 0.1); }
+/* ========================== ABOUT ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Cinzel+Decorative:wght@700&family=Pinyon+Script&family=Crimson+Text:ital,wght@0,400;1,400&display=swap');
+
+.about-page {
+  background: #050505;
+  min-height: 100vh;
+  color: gold;
+  font-family: 'Crimson Text', serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* SCANLINES */
+.scanlines {
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg, transparent, transparent 2px,
+    rgba(0,0,0,0.1) 2px, rgba(0,0,0,0.1) 4px
+  );
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* HERO */
+.about-hero {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 40px 60px;
+  position: relative;
+  z-index: 20;
+  border-bottom: 1px solid rgba(212,175,55,0.1);
+}
+
+.about-main-title {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(28px, 5vw, 52px);
+  font-weight: 700;
+  color: #d4af37;
+  letter-spacing: 4px;
+  line-height: 1.3;
+  margin: 20px 0 24px;
+}
+
+.about-intro {
+  font-family: 'Pinyon Script', cursive;
+  font-size: clamp(18px, 2.5vw, 26px);
+  color: rgba(200,190,165,0.7);
+  max-width: 700px;
+  line-height: 1.9;
+}
+
+/* SECTIONS */
+.about-section {
+  padding: 70px 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 20;
+  border-bottom: 1px solid rgba(212,175,55,0.08);
+}
+
+.about-section--alt {
+  background: rgba(212,175,55,0.02);
+}
+
+.section-label {
+  font-family: 'Cinzel', serif;
+  font-size: 20px;
+  letter-spacing: 5px;
+  color: rgba(212,175,55,0.4);
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(22px, 4vw, 36px);
+  font-weight: 700;
+  color: #d4af37;
+  letter-spacing: 3px;
+  margin-bottom: 6px;
+}
+
+.section-subtitle {
+  font-family: 'Pinyon Script', cursive;
+  font-size: 24px;
+  color: rgba(212 175 55 / 84%);
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.section-text {
+  font-size: 20px;
+  color: rgba(200,190,165,0.7);
+  line-height: 1.9;
+  margin-bottom: 18px;
+}
+
+/* VALEURS */
+.values-grid {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: left;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.value-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  color: rgba(200,190,165,0.75);
+  font-size: 16px;
+  padding: 12px 18px;
+  border: 1px solid rgba(212,175,55,0.12);
+  background: rgba(212,175,55,0.02);
+}
+
+.value-dot {
+  color: #d4af37;
+  font-size: 10px;
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+/* TÉMOIGNAGE */
+.testimonial {
+  max-width: 600px;
+  margin: 30px auto 0;
+  padding: 36px;
+  border: 1px solid rgba(212,175,55,0.2);
+  position: relative;
+  background: rgba(212,175,55,0.02);
+}
+
+.testimonial-quote {
+  font-family: 'Cinzel', serif;
+  font-size: 80px;
+  color: rgba(212,175,55,0.15);
+  line-height: 0.5;
+  margin-bottom: 20px;
+}
+
+.testimonial-text {
+  font-family: 'Pinyon Script', cursive;
+  font-size: 22px;
+  color: rgba(200,190,165,0.8);
+  line-height: 1.9;
+  font-style: normal;
+  margin-bottom: 20px;
+}
+
+.testimonial-author {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: rgba(212,175,55,0.5);
+}
+
+/* PHRASE */
+.about-phrase {
+  font-family: 'Pinyon Script', cursive;
+  font-size: 26px;
+  color: rgba(212,175,55,0.7);
+  margin: 30px 0;
+}
+
+/* BOUTONS */
+.btn-group-about {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.btn-primary {
+  background: transparent;
+  border: 1px solid #d4af37;
+  color: #d4af37;
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  padding: 14px 28px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.btn-primary:hover { background: rgba(212,175,55,0.08); }
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid rgba(212,175,55,0.2);
+  color: rgba(212,175,55,0.5);
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  padding: 14px 28px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn-secondary:hover { border-color: rgba(212,175,55,0.5); color: rgba(212,175,55,0.8); }
+
+/* GRATITUDE */
+.gratitude-section {
+  padding: 70px 40px;
+  position: relative;
+  z-index: 20;
+  background: rgba(212,175,55,0.03);
+  border-top: 1px solid rgba(212,175,55,0.15);
+  border-bottom: 1px solid rgba(212,175,55,0.15);
+}
+
+.gratitude-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.gratitude-title {
+  font-family: 'Pinyon Script', cursive;
+  font-size: 36px;
+  color: #d4af37;
+  margin-bottom: 20px;
+}
+
+.gratitude-text {
+  font-size: 17px;
+  color: rgba(200,190,165,0.7);
+  line-height: 1.9;
+  margin-bottom: 18px;
+}
+
+.gratitude-signature {
+  font-family: 'Crimson Text', serif;
+  font-style: italic;
+  font-size: 16px;
+  color: rgba(212,175,55,0.5);
+  margin-top: 30px;
+  line-height: 1.8;
+}
+
+.gratitude-signature span {
+  font-family: 'Pinyon Script', cursive;
+  font-size: 26px;
+  color: rgba(212,175,55,0.7);
+  font-style: normal;
+  display: block;
+  margin-top: 8px;
+}
+
+/* DIVIDER */
+.divider {
+  width: 80px;
+  height: 1px;
+  background: rgba(212,175,55,0.3);
+  margin: 0 auto 26px;
+  position: relative;
+}
+.divider::before, .divider::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  width: 6px;
+  height: 6px;
+  border: 1px solid rgba(212,175,55,0.4);
+  transform: rotate(45deg);
+}
+.divider::before { left: -3px; }
+.divider::after  { right: -3px; }
+
+/* BANNER */
+.classified-banner {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(180,30,30,0.5);
+  padding: 5px 16px;
+  animation: flicker 4s infinite;
+}
+@keyframes flicker {
+  0%,100%{opacity:1} 92%{opacity:1} 93%{opacity:0.3} 94%{opacity:1} 97%{opacity:0.6} 98%{opacity:1}
+}
+.dot {
+  width: 6px; height: 6px;
+  background: #c0392b;
+  border-radius: 50%;
+  display: inline-block;
+  animation: blink 1.4s infinite;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.2} }
+.classified-text {
+  color: #c0392b;
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: 4px;
+}
+/* ===== PAGE DOSSIERS ===== */
+.dossiers-page {
+  background: #050505;
+  min-height: 100vh;
+  color: #d4af37;
+  font-family: 'Crimson Text', serif;
+  position: relative;
+  overflow-x: hidden;
+  padding-bottom: 40px;
+}
+
+/* ===== HEADER ===== */
+.dossiers-header {
+  text-align: center;
+  padding: 80px 20px 40px;
+  position: relative;
+  z-index: 20;
+}
+
+.dossiers-title {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(30px, 5vw, 50px);
+  letter-spacing: 5px;
+  margin: 20px 0;
+  color: #d4af37;
+}
+
+.dossiers-subtitle {
+  color: rgba(200,190,165,0.6);
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* ===== LISTE ===== */
+.dossiers-list {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ===== BLOC LIEU ===== */
+.lieu-block {
+  border: 1px solid rgba(212,175,55,0.1);
+  background: rgba(212,175,55,0.02);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.lieu-block:hover {
+  border-color: rgba(212,175,55,0.3);
+  box-shadow: 0 0 20px rgba(212,175,55,0.08);
+}
+
+.lieu-block--open {
+  background: rgba(212,175,55,0.04);
+}
+
+/* ===== HEADER LIEU ===== */
+.lieu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px;
+  cursor: pointer;
+}
+
+.lieu-header-left {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.lieu-code {
+  font-family: 'Cinzel', serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: rgba(212,175,55,0.5);
+}
+
+.lieu-name {
+  font-size: 20px;
+  font-family: 'Cinzel', serif;
+  color: #d4af37;
+}
+
+.lieu-zone {
+  font-size: 13px;
+  color: rgba(200,190,165,0.5);
+}
+
+.lieu-header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.lieu-status {
+  font-size: 12px;
+  padding: 4px 10px;
+  border: 1px solid;
+  letter-spacing: 2px;
+}
+
+.lieu-count {
+  font-size: 12px;
+  color: rgba(200,190,165,0.6);
+}
+
+.lieu-arrow {
+  font-size: 12px;
+  color: rgba(212,175,55,0.5);
+}
+
+/* ===== DESCRIPTION ===== */
+.lieu-desc {
+  padding: 0 18px 18px;
+  font-size: 15px;
+  color: rgba(200,190,165,0.7);
+  line-height: 1.6;
+}
+
+/* ===== ARTICLES ===== */
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* ===== CARD ARTICLE ===== */
+.article-card {
+  border: 1px solid rgba(212,175,55,0.1);
+  background: rgba(212,175,55,0.02);
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.article-card:hover {
+  border-color: rgba(212,175,55,0.4);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* IMAGE */
+.article-img-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.article-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  filter: brightness(0.7);
+  transition: 0.4s;
+}
+
+.article-card:hover .article-img {
+  transform: scale(1.05);
+  filter: brightness(0.9);
+}
+
+/* CATEGORY BADGE */
+.article-category {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(0,0,0,0.7);
+  border: 1px solid rgba(212,175,55,0.4);
+  padding: 4px 10px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #d4af37;
+}
+
+/* BODY */
+.article-body {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.article-date {
+  font-size: 11px;
+  color: rgba(200,190,165,0.5);
+}
+
+.article-title {
+  font-family: 'Cinzel', serif;
+  font-size: 16px;
+  color: #d4af37;
+}
+
+.article-extrait {
+  font-size: 14px;
+  color: rgba(200,190,165,0.7);
+  line-height: 1.6;
+}
+
+/* BUTTON */
+.article-btn {
+  margin-top: auto;
+  background: transparent;
+  border: 1px solid rgba(212,175,55,0.3);
+  color: rgba(212,175,55,0.7);
+  padding: 10px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.article-btn:hover {
+  border-color: #d4af37;
+  color: #d4af37;
+  background: rgba(212,175,55,0.05);
+}
+/* FOOTER */
+.footer-bar {
+  padding: 14px 32px;
+  border-top: 1px solid rgba(212,175,55,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 20;
+}
+.footer-code {
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  color: rgba(212,175,55,0.25);
+  letter-spacing: 2px;
+}
+.footer-status { display: flex; align-items: center; gap: 6px; }
+.status-dot {
+  width: 5px; height: 5px;
+  background: #2ecc71;
+  border-radius: 50%;
+  animation: blink 2s infinite;
+}
+.footer-status span {
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  color: rgba(80,200,100,0.5);
+  letter-spacing: 2px;
+}
+/* ===== HERO ===== */
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 32px;
+  position: relative;
+  z-index: 20;
+}
+
+/* ===== BANNIÈRE ACCÈS RESTREINT ===== */
+.classified-banner {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgb(255, 0, 0);
+  padding: 5px 16px;
+  margin-bottom: 36px;
+  animation: flicker 4s infinite;
+}
+
+@keyframes flicker {
+  0%,  100% { opacity: 1; }
+  92%        { opacity: 1; }
+  93%        { opacity: 0.3; }
+  94%        { opacity: 1; }
+  97%        { opacity: 0.6; }
+  98%        { opacity: 1; }
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background: #ff1900;
+  border-radius: 50%;
+  display: inline-block;
+  animation: blink 1.4s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.2; }
+}
+
+.classified-text {
+  color: #ff1900;
+  font-family: 'Cinzel', serif;
+  font-size: 15px;
+  letter-spacing: 4px;
+}
+
+/* ===== TITRE FDLA ===== */
+.hero-title {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(52px, 10vw, 80px);
+  color: #d4af37;
+  letter-spacing: 12px;
+  margin: 0 0 8px;
+  position: relative;
+}
+
+.hero-title::after {
+  content: 'FDLA';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  color: rgba(200, 40, 40, 0.18);
+  clip-path: polygon(0 45%, 100% 40%, 100% 55%, 0 60%);
+  animation: glitch 6s infinite;
+}
+
+@keyframes glitch {
+  0%, 89%, 91%, 100% { transform: none; opacity: 0; }
+  90%                 { transform: translate(-3px, 0); opacity: 1; }
+}
+
+/* ===== SOUS-TITRE ===== */
+.hero-subtitle {
+  font-family: 'Cinzel', serif;
+  font-style: italic;
+  color: rgba(212, 175, 55, 0.45);
+  font-size: 35px;
+  letter-spacing: 6px;
+  margin: 0 0 26px;
+}
+
+/* ===== SÉPARATEUR ===== */
+.divider {
+  width: 80px;
+  height: 1px;
+  background: rgba(212, 175, 55, 0.3);
+  margin: 0 auto 26px;
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  position: absolute;
+  top: -3px;
+  width: 6px;
+  height: 6px;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  transform: rotate(45deg);
+}
+.divider::before { left: -3px; }
+.divider::after  { right: -3px; }
+
+/* ===== DESCRIPTION ===== */
+.hero-desc {
+  color: rgb(200, 190, 165);
+  font-size: 20px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  font-style: italic;
+}
+
+/* ===== BOUTONS ===== */
+.btn-group {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: transparent;
+  border: 1px solid #d4af37;
+  color: #d4af37;
+  font-family: 'Cinzel', serif;
+  font-size: 15px;
+  letter-spacing: 3px;
+  padding: 14px 30px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background: rgba(212, 175, 55, 0.08);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  color: rgba(212, 175, 55, 0.45);
+  font-family: 'Cinzel', serif;
+  font-size: 15px;
+  letter-spacing: 3px;
+  padding: 14px 30px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+  border-color: rgba(212, 175, 55, 0.5);
+  color: rgba(212, 175, 55, 0.8);
+}
+
+/* ===== FOOTER ===== */
+.fdla-footer {
+  background: #050505;
+  border-top: 1px solid rgba(212,175,55,0.15);
+  padding: 40px 20px 20px;
+  color: rgba(200,190,165,0.7);
+  font-family: 'Crimson Text', serif;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-logo {
+  font-family: 'Cinzel', serif;
+  color: #d4af37;
+  letter-spacing: 3px;
+}
+
+.footer-text {
+  font-size: 14px;
+  color: rgba(200,190,165,0.6);
+}
+
+.footer-socials {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-socials a {
+  text-decoration: none;
+  color: rgba(212,175,55,0.6);
+  font-family: 'Cinzel', serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s;
+}
+
+.footer-socials a:hover {
+  color: #d4af37;
+  border-bottom: 1px solid #d4af37;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 12px;
+  color: rgba(212,175,55,0.4);
+}
+.footer-bar {
+  padding: 14px 32px;
+  border-top: 1px solid rgba(212, 175, 55, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 20;
+}
+
+.footer-code {
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  color: rgba(212, 175, 55, 0.25);
+  letter-spacing: 2px;
+}
+
+.footer-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status-dot {
+  width: 5px;
+  height: 5px;
+  background: #2ecc71;
+  border-radius: 50%;
+  animation: blink 2s infinite;
+}
+
+.footer-status span {
+  font-family: 'Cinzel', serif;
+  font-size: 9px;
+  color: rgba(80, 200, 100, 0.5);
+  letter-spacing: 2px;
+}
