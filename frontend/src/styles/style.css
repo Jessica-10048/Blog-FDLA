@@ -829,7 +829,84 @@ color: rgb(223, 185, 19);
   border-color: rgba(212, 175, 55, 0.5);
   color: rgba(212, 175, 55, 0.8);
 }
+/* ===== LOGIN PAGE ===== */
+.login-page {
+  min-height: 100vh;
+  background: #050505;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Crimson Text', serif;
+}
 
+.login-box {
+  border: 1px solid rgba(212,175,55,0.2);
+  padding: 40px;
+  width: 400px;
+  background: rgba(212,175,55,0.03);
+  text-align: center;
+  box-shadow: 0 0 30px rgba(0,0,0,0.8);
+}
+
+.login-title {
+  font-family: 'Cinzel', serif;
+  color: #d4af37;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+}
+
+.login-subtitle {
+  color: rgba(200,190,165,0.6);
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-form input {
+  padding: 12px;
+  background: black;
+  border: 1px solid rgba(212,175,55,0.3);
+  color: #d4af37;
+  outline: none;
+}
+
+.login-form input:focus {
+  border-color: #d4af37;
+}
+
+.login-form button {
+  padding: 12px;
+  background: transparent;
+  border: 1px solid #d4af37;
+  color: #d4af37;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-form button:hover {
+  background: rgba(212,175,55,0.1);
+}
+
+.login-register {
+  margin-top: 20px;
+  font-size: 13px;
+  color: rgba(200,190,165,0.6);
+}
+
+.login-register a {
+  color: #d4af37;
+  text-decoration: none;
+}
+
+.login-register a:hover {
+  text-decoration: underline;
+}
 /* ===== FOOTER ===== */
 .fdla-footer {
   background: #050505;

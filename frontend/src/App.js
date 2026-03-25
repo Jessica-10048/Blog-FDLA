@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Fdla from "./pages/Fdla";
 import About from "./pages/About";
+import Login from "./pages/Login";
 import Footer from "./components/Footer";
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/fdla" element={<Fdla/>}/>
         <Route path="/about" element={<About />} />
+        <Route path="/login" element={<Login />} />
         
       </Routes>
       <Footer/>
